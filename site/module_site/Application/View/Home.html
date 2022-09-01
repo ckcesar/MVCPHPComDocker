@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="Pt-BR">
+    <head>
+        <title>Página Teste</title>        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" >
+
+        <?php include('includes/head.php'); ?>
+    </head>
+
+    <body>
+        <h2>LISTANDO OS CLIENTES DO BANCO DE DADOS</h2>
+
+        <?php 
+          foreach($view_getCliente as $cliente): ?>
+            <p><?= $cliente->nome ?> <?= $cliente->sobrenome ?>, <?= $cliente->idade ?></p>
+       <?php endforeach; ?>
+
+    </body>
+</html>
